@@ -8,12 +8,14 @@
 
 name: Call other repo
 
-on: [repository_dispatch]
+on: 
+  repository_dispatch:
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: call the other repo
+      - name: Run Automated UI tests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EVENT: push
