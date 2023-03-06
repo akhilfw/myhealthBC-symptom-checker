@@ -18,7 +18,6 @@ jobs:
       - name: Run Automated UI tests
         env:
           GITHUB_TOKEN: ${{ secrets.TEST_TRIGGER }}
-          EVENT: trigger_new1
           ORG: EYDS-CA
           REPO: SATAutomation
         run: |
